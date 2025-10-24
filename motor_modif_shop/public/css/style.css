@@ -1,0 +1,531 @@
+
+/* ========================================
+   GENERAL STYLES
+======================================== */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #0d6efd !important;
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+.sidebar {
+    min-height: calc(100vh - 56px);
+    background-color: #212529;
+    padding: 20px 0;
+    position: sticky;
+    top: 56px;
+}
+
+.sidebar a {
+    color: #adb5bd;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar a:hover {
+    background-color: #343a40;
+    color: #fff;
+    border-left-color: #0d6efd;
+    padding-left: 25px;
+}
+
+.sidebar a.active {
+    background-color: #495057;
+    color: #fff;
+    border-left-color: #0d6efd;
+    font-weight: 600;
+}
+
+.sidebar a i {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.sidebar hr {
+    margin: 15px 0;
+    border-color: #495057;
+}
+
+/* ========================================
+   CONTENT WRAPPER
+======================================== */
+.content-wrapper {
+    padding: 20px;
+    min-height: calc(100vh - 56px);
+}
+
+/* ========================================
+   CARDS
+======================================== */
+.card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 2px solid #f0f0f0;
+    font-weight: 600;
+}
+
+/* ========================================
+   STAT CARDS (Dashboard)
+======================================== */
+.stat-card {
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.stat-card.primary { 
+    border-left-color: #0d6efd; 
+}
+
+.stat-card.success { 
+    border-left-color: #198754; 
+}
+
+.stat-card.warning { 
+    border-left-color: #ffc107; 
+}
+
+.stat-card.danger { 
+    border-left-color: #dc3545; 
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-card h6 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   TABLES
+======================================== */
+.table {
+    background-color: #fff;
+}
+
+.table thead {
+    background-color: #212529;
+    color: #fff;
+}
+
+.table thead th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,0.02);
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+.btn {
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* ========================================
+   BADGES
+======================================== */
+.badge {
+    padding: 6px 12px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+/* ========================================
+   ALERTS
+======================================== */
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.alert-dismissible .btn-close {
+    padding: 1rem 1.25rem;
+}
+
+/* ========================================
+   FORMS
+======================================== */
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 0.875rem;
+    color: #dc3545;
+    margin-top: 5px;
+}
+
+/* ========================================
+   PAGINATION
+======================================== */
+.pagination {
+    margin-top: 20px;
+}
+
+.page-link {
+    color: #0d6efd;
+    border-radius: 5px;
+    margin: 0 3px;
+    transition: all 0.3s;
+}
+
+.page-link:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* ========================================
+   BREADCRUMB
+======================================== */
+.breadcrumb {
+    background-color: transparent;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-item a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+/* ========================================
+   SEARCH BOX
+======================================== */
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    padding-left: 40px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+/* ========================================
+   IMAGE PRODUCT
+======================================== */
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+@media print {
+    .btn, 
+    nav, 
+    .navbar,
+    .sidebar, 
+    footer,
+    .no-print {
+        display: none !important;
+    }
+    
+    .content-wrapper {
+        padding: 0 !important;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    body {
+        background: white;
+    }
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        min-height: auto;
+    }
+    
+    .content-wrapper {
+        padding: 15px;
+    }
+    
+    .table {
+        font-size: 0.85rem;
+    }
+    
+    .stat-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================================
+   LOADING SPINNER
+======================================== */
+.spinner-border {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+/* ========================================
+   UTILITIES
+======================================== */
+.text-muted {
+    color: #6c757d !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075) !important;
+}
+
+.rounded {
+    border-radius: 8px !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+/* ========================================
+   QUICK ACTIONS (Dashboard)
+======================================== */
+.quick-action-btn {
+    text-align: center;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.quick-action-btn:hover {
+    transform: scale(1.05);
+}
+
+.quick-action-btn i {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+/* ========================================
+   CART TABLE (Transactions)
+======================================== */
+#cartTable input[type="number"] {
+    width: 80px;
+}
+
+#cartTable .btn-sm {
+    padding: 4px 8px;
+}
+
+/* ========================================
+   INVOICE PRINT
+======================================== */
+.invoice-header {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.invoice-header h3 {
+    margin-bottom: 5px;
+    color: #0d6efd;
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ========================================
+   SCROLLBAR CUSTOM
+======================================== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
