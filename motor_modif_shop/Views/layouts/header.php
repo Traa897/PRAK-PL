@@ -95,7 +95,11 @@
                 <a href="index.php?c=transactions&a=index" class="<?= (isset($_GET['c']) && $_GET['c'] == 'transactions') ? 'active' : '' ?>">
                     <i class="fas fa-shopping-cart"></i> Transaksi
                 </a>
+                <a href="index.php?c=recyclebin&a=index" class="<?= (isset($_GET['c']) && $_GET['c'] == 'recyclebin') ? 'active' : '' ?>">
+                    <i class="fas fa-trash-restore"></i> Recycle Bin
+                </a>
             </div>
+
 
             <div class="col-md-10 content-wrapper">
                 <?php if ($flash = getFlash()): ?>
